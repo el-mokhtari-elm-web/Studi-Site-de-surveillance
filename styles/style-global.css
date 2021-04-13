@@ -1,0 +1,718 @@
+/**************** styles for all screens ******************/
+
+@font-face {
+    font-family: "Orbitron";
+    src: url("../fonts/Orbitron.ttf") format("ttf");
+}
+
+/*************** reset margin and padding *****************/
+
+body {
+    margin: 0;
+    font-size: 62.5%;                       /* 1em = 10px */
+    font-family: "Orbitron";
+    background-color: rgb(143, 143, 143);
+    color: blanchedalmond;
+}
+
+/*************** reset margin and padding ******************/
+
+
+/********************** styles global **********************/
+
+li {
+    list-style: none;
+}
+a {
+    font-size: 1.25vw;
+    /*color: wheat;*/
+}
+a:hover {
+    text-decoration: none;
+    color: slategrey;
+}
+strong {
+    font-weight: normal;
+}
+
+/********************** styles global **********************/
+
+
+/************************** Header *************************/
+
+header {
+    border-bottom: 2px solid wheat;
+    padding: 0 2% 1%;
+}
+
+header, #sous-titre {
+    align-items: center;
+    margin: 1% 0 2%;
+}
+
+#bloc-logo {
+    height: 7vw;
+    flex: 2;
+    /* flex: 1; display: block -> mediaQueries > tablette */
+}
+
+.logo {
+    max-height: 100%;
+}
+
+h1 {
+    flex: 3;
+    color: white;
+    font-size: 3vw;
+}
+
+span {
+    overflow-wrap: break-word;
+    /* display: block -> mediaQueries > tablette */
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    flex: 1;
+}
+
+.menu-admin {
+    position: relative;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    right: 10%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.link-accueil, .link-admin {
+    margin: 0 1em;
+}
+
+.menu-admin li {
+    width: auto;
+    margin: 0 6.5px;
+}
+
+.admin {
+    font-size: 1.25em;
+    color: white;
+}
+
+.admin, .logout {
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+}
+
+.logout {
+    border-radius: 10px;
+    margin-left: 13%;
+}
+.logout:hover {
+    background-color: slategray;
+}
+
+.menu:first-child p::after {
+    content: "🔐";
+    margin-left: 7px;
+}
+
+.menu:first-child p:hover {
+    color: teal;
+}
+
+/************************** Header *************************/
+
+
+/******************** Section sous titre *******************/
+
+h2, h4 {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1%;
+    font-size: 2.5vw;
+}
+
+h3 {
+    font-size: 1.75vw;
+}
+
+.slogan {
+    display: block;
+    font-size: 0.5em;
+    color: black;
+}
+
+/******************** Section sous titre *******************/
+
+
+/*********************** Section login *********************/
+
+#login {
+    display: none;
+    position: absolute;
+    flex: 2;
+    min-width: 17vw;
+    top: 70%;
+    right: 5%;
+    padding: 2%;
+    border: 3px solid goldenrod;
+    border-radius: 7px;
+    background-color: goldenrod;
+    z-index: 999;
+}
+#login::before {
+    content: "➦";
+    position: absolute;
+    top: -22%;
+    left: 5%;
+    font-size: 3em;
+}
+
+label, p {
+    display: inline;
+    font-size: 1.25vw;
+}
+
+input, input[type=submit]:not(.update-input) {
+    text-align: left;
+    font-weight: bold;
+}
+
+::placeholder {
+    font-size: 1.25vw;
+}
+
+input[type=submit]:not(.update-input) {
+    margin-top: 3%;
+    border: none;
+    text-align: center;
+    color: ivory;
+    background-color: indianred;
+}
+
+/*********************** Section login *********************/
+
+
+/*********************** Section infos *********************/
+
+#section-infos {
+    display: flex;
+    margin: 3.5% auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#table_missions {
+    display: block;
+    margin: 0;
+}
+
+.container-mission {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    max-width: 100%;
+    align-items: center;
+}
+
+.title-infos {
+    color: greenyellow;
+}
+
+.page {
+    color: black;
+    text-decoration: underline;
+}
+
+.agent {
+    color: darkgreen;
+}
+
+.list-infos {
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-infos li {
+    display: inline-flex;
+}
+
+.objectif {
+    color: black;
+}
+
+article {
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    margin-top: 1%;
+    padding: 1.5%;
+    font-size: 2em;
+}
+
+.infos-mission {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+}
+
+.article-mission {
+    display: flex;
+    border: unset;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.5vw;
+    color: yellowgreen;
+}
+
+select {
+    max-width: 100%;
+    height: 1.5em;
+    margin: 0.75em auto;
+    padding: 0 3px;
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    background-color: tan;
+}
+
+/*********************** Section infos *********************/
+
+
+/************************ Form infos ***********************/
+
+#form-manag {
+    max-width: 77vw;
+}
+
+.form-manag {
+    margin: 5% auto;
+}
+
+h3 {
+    margin: 0 auto 3%;
+    text-align: center;
+}
+
+#form-manag h4 {
+    margin-bottom: 2%;
+}
+
+form {
+    position: relative;
+    margin: 0 2% 5%;
+    color: black;
+}
+
+#form-agent, #form-contact, #form-cible, #form-planque {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    padding: 2% 0;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 7px;
+    box-shadow: inset 0px 0px 5px 2px black, 0 0 0.5em rgb(59, 59, 59);
+    background-color: rgb(216, 216, 216);
+}
+
+legend {
+    position: absolute;
+    width: auto;
+    top: -15%;
+    left: 7%;
+    font-size: 2em;
+    font-weight: bold;
+    color:mediumseagreen
+}
+
+aside {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+sup {
+    display: inline-block;
+    font-size: 1vw;
+    font-weight: bold;
+    color: red;
+}
+sup::before {
+    content: "*";
+}
+
+.input {
+    margin-right: 0.75em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.input input, .input select, .input option {
+    display: block;
+    width: 13vw;
+    height: 2.5vw;
+    border: none;
+    border-radius: 7px;
+    font-weight: 500;
+}
+
+#form-manag .submit {
+    margin: 1% auto;
+}
+.submit input {
+    width: 15vw;
+    height: 2.75vw;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+}
+
+.checkbox {
+    margin: 0.25% 3% 0.25% 0.5%;
+    font-size: 1em;
+    font-weight: bold;
+    color: black;
+}
+    
+/************************ Form infos ***********************/
+
+
+/************************ Table infos **********************/
+
+#table-manag {
+    width: 100%;
+}
+
+table {
+    display: table;
+    width: 80%;
+    border-collapse: separate;
+    margin: 2% auto;
+    font-size: 1.5em;
+}
+
+#table_missions {
+    width: 100%;
+}
+
+#table_missions td {
+    padding: 1.5% auto;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+caption {
+    display: table-caption;
+    margin: 0 auto;
+    text-align: center;
+    color: blanchedalmond;
+}
+
+tr {
+    display: table-row;
+    width: 100%;
+    background-color: rgb(78, 78, 78);
+}
+th:first-child {
+    background-color: black;
+    color: white;
+}
+
+#entete {
+    padding: 0.5% 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(209, 116, 28);
+}
+
+th {
+    color: black;
+    background-color: bisque;
+}
+
+th, td {
+    display: table-cell;
+    border: 1px solid bisque;
+    padding: 0;
+    text-align: center;
+}
+td:nth-child(2), td:last-child {
+    max-width: 5%;
+}
+td:last-child {
+    width: 5%;
+}
+
+#spec-agent {
+    display: inline;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#update-form {
+    display: inline;
+}
+
+.update-input {
+    margin-left: 1%;
+    border: none;
+    border-radius: 50%;
+    font-size: 1em;
+    line-height: 1em;
+    background-color: green;
+}
+.update-input:hover {
+    opacity: 0.5;
+}
+
+#delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+#delete {
+    background-color: rgb(255, 55, 55);
+}
+
+#delete:hover{
+    opacity: 0.5;
+}
+
+#delete img {
+    display: flex;
+    max-height: 65%;
+}
+
+#current-spec {
+    display: block;
+    margin: 0.5% auto;
+    width: 100%;
+}
+
+#current-spec li {
+    display: inline;
+    margin: 3% 0 3% 3%;
+}
+
+#current-spec li a {
+    font-size: 1em;
+    line-height: 1em;
+    margin-left: 0.75em;
+    font-weight: bold;
+    color: red;
+}
+
+/************************ Table infos **********************/
+
+
+/*********************** Form mission **********************/
+
+.title-mission {
+    width: 50%;
+    margin: 2% auto 0;
+    text-align: center;
+    font-size: 3em;
+}
+
+#form-mission {
+    width: 90%;
+    margin: 1% auto 0;
+    text-align: center;
+}
+
+.row {
+    display: inline-block;
+    width: 20%;
+    margin: 0 0.1em;
+    font-size: 1.75em;
+    line-height: 1.75em;
+}
+
+.input-mission {
+    max-width: 100%;
+    height: 2em;
+    margin: 0.75em auto;
+    padding: 0 3px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: 600;
+
+}
+
+.input-data-mission {
+    width: 100%;
+    height: 1.5em;
+    margin: 0 auto;
+    padding: 0 3px;
+    border-radius: 0;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    font-weight: 500;
+    background-color: white;
+}
+
+.text-area {
+    display: block;
+    width: 90%;
+    height: 70%;
+    margin: 3% auto 0;
+    font-size: 1.75em;
+}
+
+.input-mission {
+    width: 100%;
+}
+
+#text-mission {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.text-mission {
+    padding: 3%;
+    background-color: rgb(245, 228, 216);
+    color: black;
+    font-weight: bold;
+}
+
+.submit-mission {
+    width: 30%;
+    height: 50px;
+    border-radius: 20px;
+    margin: 0 auto;
+    font-size: 2em;
+}
+.submit-mission:hover {
+    background-color: chartreuse;
+}
+
+.details-mission {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1%;
+    border-radius: 15px;
+}
+
+/*********************** Form mission **********************/
+
+
+/*************************** Footer ************************/
+
+footer {
+    display: table;
+    width: 100%;
+    min-height: 170px;
+    margin-top: 5%;
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    background-color: gray;
+}
+
+#margin {
+    display: table-cell;
+    width: 5%;
+}
+
+footer p {
+    display: table-cell;
+    width: 35%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#nav_footer {
+    display: table-cell;
+    width: 45%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#elmmonitor {
+    display: table-cell;
+    width: auto;
+    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.item {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+}
+
+.item:first-child a::before {
+     content: "🏠";
+     margin-right: 5px;
+}
+.item:nth-child(2) a::before {
+    content: "🔐";
+    margin-right: 5px;
+}
+.item:last-child a::before {
+    content: "📧";
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.item a {
+    display: inline;
+    font-size: 0.75em;
+    color: black;
+}
+.item a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.elmmonitor {
+    max-height: 100%;
+}
+
+/************************** Footer *************************/
