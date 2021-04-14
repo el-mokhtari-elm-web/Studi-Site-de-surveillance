@@ -1,0 +1,86 @@
+body {
+    background-color: slategrey;
+}
+
+aside, form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#table-manag .checkbox input {
+    display: flex;
+    align-self: center;
+    width: 20px;
+    height: 20px;
+}
+
+#table-manag td {
+    background-color: snow;
+    color: black;
+}
+
+#table-manag select {
+    display: none;
+}
+
+body {
+    background-color: slategrey;
+    font-size: 1.5vw;
+}
+
+section {
+    height: auto;
+}
+
+aside, form {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+legend {
+    display: none;
+}
+
+select, option {
+    height: 30vw;
+}
+
+label, input:not(input[type=checkbox]) {
+    position: static;
+    display: flex;
+    align-self: center;
+    height: 7vw;
+    width: 100%;
+    margin: 2% auto;
+    padding: 1vw;
+}
+
+.checkbox {
+    display: flex;
+    width: 50px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 1vw;
+    height: 1vw;
+}
+
+#form-mission {
+    display: none;
+}
+
+#table_missions {
+    display: none;
+}
+
+sup {
+    display: none;
+}
+
+
